@@ -144,8 +144,20 @@ threadLock <span class="token operator">=</span> threading<span class="token pun
     thread1 <span class="token operator">=</span> threading<span class="token punctuation">.</span>Thread<span class="token punctuation">(</span>target<span class="token operator">=</span>write_string<span class="token punctuation">,</span> args<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">"写入: "</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
 		</div>
-		<p style='color:#707070'>文章来源互联网，如有侵权，请联系管理员删除。邮箱：417803890@qq.com / QQ:417803890</p>
-		<img width="100%" height="" class="" src="https://www.ls27.cn/public/banner/wpybanner-web.png" alt="微配音">
+		<h3>两个列表生成字典</h3>
+		<p style='color:#707070'>
+		# -*-coding: utf-8-*- 
+
+			keys = ['name', 'age', 'tel']
+			values = ['aqi', 3, 123456]
+			dict1 = dict(zip(keys, values))
+			print dict1
+
+			'''
+			{'age': 3, 'tel': 123456, 'name': 'aqi'}
+'''
+		</p>
+		
 		<div class='text-right' style='padding-top:2em'>
 		<hr>
 			
