@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>多个csv文件写入excel多个sheet</title>
+</head>
+
+<body>
+<p>csv写入一个excel</p>
+
+<pre>
+# -*- coding: UTF-8 -*-
+
+import pandas as pd
+import os
+import re
+
+if __name__ == '__main__':
+    Folder_Path = 'D:/file/excel文件/output_file/'
+
+    writer = pd.ExcelWriter('D:/file/excel文件/out.xlsx')
+    file_list = os.listdir(Folder_Path)
+    print(file_list)
+    for item in file_list:
+        sheetname = item.split('.csv')[0]
+
+        data = pd.read_table(Folder_Path+item, sep=',', encoding='GBK')
+        data.to_excel(writer, sheetname, index=False)
+
+    writer.save()
+</pre>
+
+</body>
+</html>
